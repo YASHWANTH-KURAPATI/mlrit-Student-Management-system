@@ -143,7 +143,7 @@
         async function loadStudents() {
             try {
                 const response = await fetch(
-                    "http://localhost:3000/api/faculty/students",
+                    "/api/faculty/students",
                     {
                         headers: {
                             Authorization: "Bearer " + token
@@ -270,7 +270,7 @@
 
                 try {
                     const response = await fetch(
-                        "http://localhost:3000/api/faculty/marks",
+                        "/api/faculty/marks",
                         {
                             method: "POST",
                             headers: {

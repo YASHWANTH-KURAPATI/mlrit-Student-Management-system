@@ -169,7 +169,7 @@ async function loadStudents() {
     }
 
     try {
-        const response = await fetch("http://localhost:3000/api/faculty/students", {
+        const response = await fetch("/api/faculty/students", {
             headers: {
                 Authorization: "Bearer " + token
             }
@@ -267,10 +267,10 @@ async function loadRecords() {
 
     try {
         const [marksResponse, attendanceResponse] = await Promise.all([
-            fetch("http://localhost:3000/api/admin/records/marks/" + encodeURIComponent(studentId), {
+            fetch("/api/admin/records/marks/" + encodeURIComponent(studentId), {
                 headers: { Authorization: "Bearer " + token }
             }),
-            fetch("http://localhost:3000/api/admin/records/attendance/" + encodeURIComponent(studentId), {
+            fetch("/api/admin/records/attendance/" + encodeURIComponent(studentId), {
                 headers: { Authorization: "Bearer " + token }
             })
         ]);

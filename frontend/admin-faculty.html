@@ -194,7 +194,7 @@
 
             try {
                 const response = await fetch(
-                    "http://localhost:3000/api/admin/faculty",
+                    "/api/admin/faculty",
                     {
                         headers: {
                             "Authorization": "Bearer " + token
@@ -363,7 +363,7 @@
                 let body;
 
                 if (editingFacultyId !== null) {
-                    url = "http://localhost:3000/api/admin/faculty/" +
+                    url = "/api/admin/faculty/" +
                         encodeURIComponent(editingFacultyId);
 
                     method = "PUT";
@@ -393,7 +393,7 @@
                         return;
                     }
 
-                    url = "http://localhost:3000/api/admin/faculty";
+                    url = "/api/admin/faculty";
                     method = "POST";
 
                     body = {
@@ -473,7 +473,7 @@
 
             try {
                 const response = await fetch(
-                    "http://localhost:3000/api/admin/faculty/" +
+                    "/api/admin/faculty/" +
                     encodeURIComponent(faculty.faculty_id),
                     {
                         method: "DELETE",

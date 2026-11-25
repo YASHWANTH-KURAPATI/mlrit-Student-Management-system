@@ -38,7 +38,7 @@ if (loginForm) {
         message.textContent = "Logging in...";
 
         try {
-            const response = await fetch("http://localhost:3000/api/login", {
+            const response = await fetch("/api/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -94,7 +94,7 @@ async function protectDashboard(requiredRole) {
     }
 
     try {
-        const response = await fetch("http://localhost:3000/api/profile", {
+        const response = await fetch("/api/profile", {
             headers: {
                 "Authorization": "Bearer " + token
             }

@@ -121,7 +121,7 @@
 
             try {
                 const response = await fetch(
-                    "http://localhost:3000/api/admin/students/next-id?year=" +
+                    "/api/admin/students/next-id?year=" +
                     encodeURIComponent(year),
                     {
                         headers: {
@@ -196,7 +196,7 @@
                 studentMessage.textContent = "Adding student...";
 
                 const response = await fetch(
-                    "http://localhost:3000/api/admin/students",
+                    "/api/admin/students",
                     {
                         method: "POST",
                         headers: {

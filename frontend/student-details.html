@@ -269,7 +269,7 @@
 
             try {
                 const response = await fetch(
-                    "http://localhost:3000/api/profile",
+                    "/api/profile",
                     {
                         headers: {
                             "Authorization": "Bearer " + token
@@ -313,7 +313,7 @@
         async function loadProfile(token) {
             try {
                 const response = await fetch(
-                    "http://localhost:3000/api/student/profile",
+                    "/api/student/profile",
                     {
                         headers: {
                             "Authorization": "Bearer " + token
@@ -356,7 +356,7 @@
         async function loadMarks(token) {
             try {
                 const response = await fetch(
-                    "http://localhost:3000/api/student/marks",
+                    "/api/student/marks",
                     {
                         headers: {
                             "Authorization": "Bearer " + token
@@ -417,7 +417,7 @@
 
             try {
                 const response = await fetch(
-                    "http://localhost:3000/api/student/attendance",
+                    "/api/student/attendance",
                     {
                         headers: {
                             "Authorization": "Bearer " + token
