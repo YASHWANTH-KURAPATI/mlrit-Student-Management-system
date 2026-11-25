@@ -555,13 +555,24 @@ app.post(
         let connection;
 
         try {
-            const {
+           const {
                 username,
                 password,
                 full_name,
                 email,
+                department,
                 year_of_study
             } = req.body;
+            const validDepartments = [
+                "CSE", "CSD", "CSM", "CSIT", "IT",
+                "ECE", "EEE", "MECH", "CIVIL", "AI&DS"
+            ];
+
+            if (!validDepartments.includes(department)) {
+                return res.status(400).json({
+                    message: "Please select a valid department."
+                });
+            }
 
             if (
                 typeof username !== "string" || !username.trim() ||

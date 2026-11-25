@@ -63,13 +63,20 @@
                 <input type="email" id="email" required>
 
                 <label for="department">Department</label>
-                <input
-                    type="text"
-                    id="department"
-                    value="CSE"
-                    readonly
-                    required
-                >
+
+                <select id="department" required>
+                    <option value="">Select Department</option>
+                    <option value="CSE">CSE</option>
+                    <option value="CSD">CSD - Data Science</option>
+                    <option value="CSM">CSM - AI & ML</option>
+                    <option value="CSIT">CSIT</option>
+                    <option value="IT">IT</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="MECH">Mechanical</option>
+                    <option value="CIVIL">Civil</option>
+                    <option value="AI&DS">AI & Data Science</option>
+                </select>
 
                 <button type="submit">Add Student</button>
 
@@ -211,7 +218,7 @@
                 const generatedId = result.student_id || "";
 
                 addStudentForm.reset();
-                document.getElementById("department").value = "CSE";
+                document.getElementById("department").value ="";
 
                 // Show the ID of the student just added.
                 studentIdField.value = generatedId;
